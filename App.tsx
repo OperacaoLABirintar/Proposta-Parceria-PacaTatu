@@ -1,23 +1,36 @@
 
 import React from 'react';
-import { LabirintarLogo } from './components/LabirintarLogo.tsx';
-import { PacaTatuLogo } from './components/PacaTatuLogo.tsx';
 
 const App: React.FC = () => {
   return (
     <div className="bg-brand-areia min-h-screen font-sans text-brand-chocolate antialiased">
-      <div className="container mx-auto p-4 sm:p-8 max-w-4xl">
-        
-        <header className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 mb-12 sm:mb-20">
-          <LabirintarLogo className="h-20" />
-          <div className="flex items-center space-x-4">
-             <span className="text-2xl font-slab text-gray-400">&</span>
-             <PacaTatuLogo className="h-16" />
-          </div>
-        </header>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-brand-areia/95 backdrop-blur-sm shadow-sm">
+        <div className="container mx-auto max-w-4xl px-4 sm:px-5">
+            <div className="py-3 flex items-center">
+                <img src="https://operacaolabirintar.github.io/Reposit-rio-de-Imagens/IMG_5430.png" alt="Labirintar Logo" className="w-32" />
+            </div>
+        </div>
+      </header>
 
+      <div className="container mx-auto p-4 sm:p-8 max-w-4xl mt-16">
+        
         <main>
           <section className="text-center mb-16 sm:mb-24">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+              {/* Paca Tatu Logo */}
+              <div className="font-slab text-5xl font-bold text-brand-chocolate">
+                  Paca Tatu
+              </div>
+              
+              <span className="text-4xl font-slab text-gray-400">+</span>
+
+              {/* Labirintar Logo */}
+              <div className="flex items-center">
+                <div className="font-slab text-5xl tracking-wide">
+                  <span className="text-brand-goiaba">LAB</span><span className="text-brand-laranja">irintar</span>
+                </div>
+              </div>
+            </div>
             <h1 className="font-slab text-4xl md:text-6xl text-brand-goiaba mb-4">
               Uma Parceria para Encantar
             </h1>
@@ -29,8 +42,8 @@ const App: React.FC = () => {
           <section className="mb-12 sm:mb-20">
              <h2 className="font-slab text-3xl md:text-4xl text-brand-laranja mb-6 text-center">A Oportunidade</h2>
              <div className="bg-white/70 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-brand-creme">
-                <p className="text-lg leading-relaxed text-justify">
-                    A Labirintar propõe uma parceria com a Paca Tatu, empresa especializada em eventos teatrais escolares, para enriquecer nossa modalidade de teatro extracurricular. Acreditamos que a união do nosso propósito com a expertise cênica da Paca Tatu pode criar experiências inesquecíveis. A parceria enriqueceria a modalidade de teatro da Labirintar, oferecendo um diferencial com apresentações de múltiplas linguagens. Acreditamos que essa conexão possa ocorrer naturalmente, gerando grande valor para as crianças e famílias.
+                <p className="text-lg leading-relaxed text-center">
+                    Propomos uma parceria para integrar a expertise cênica da Paca Tatu em nossa rede de escolas. Juntos, podemos transformar um evento pontual de nosso currículo em uma experiência extracurricular rica e única, além de uma fonte extra de receita recorrente e escalável.
                 </p>
              </div>
           </section>
@@ -39,15 +52,15 @@ const App: React.FC = () => {
             <h2 className="font-slab text-3xl md:text-4xl text-brand-laranja mb-8 text-center">Nossa Proposta</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-xl shadow-md p-6 border border-brand-creme transform hover:scale-105 transition-transform duration-300">
-                <h3 className="font-slab text-2xl text-brand-goiaba mb-3">Evento Exclusivo</h3>
+                <h3 className="font-slab text-2xl text-brand-goiaba mb-3">Evento Integrado</h3>
                 <p>
-                  Inclusão de uma apresentação teatral da Paca Tatu por semestre, trazendo o teatro de múltiplas linguagens para dentro do nosso ambiente de aprendizagem e encantamento.
+                  Inclusão de uma apresentação teatral da Paca Tatu por semestre em cada escola parceira, como parte do nosso currículo da experiência de teatro no extracurricular.
                 </p>
               </div>
               <div className="bg-white rounded-xl shadow-md p-6 border border-brand-creme transform hover:scale-105 transition-transform duration-300">
                 <h3 className="font-slab text-2xl text-brand-goiaba mb-3">Modelo Acessível</h3>
                 <p>
-                  A um custo de <span className="font-bold">R$ 60 por criança</span>, diluído nas mensalidades, oferecemos uma experiência de alto valor agregado de forma integrada ao nosso programa extracurricular.
+                  A um custo de <span className="font-bold">R$ 60 por criança</span>, garantindo uma experiência de alto valor de forma integrada e acessível para as famílias.
                 </p>
               </div>
             </div>
@@ -56,7 +69,7 @@ const App: React.FC = () => {
           <section className="text-center bg-brand-creme/50 rounded-2xl p-8 sm:p-12">
             <h2 className="font-slab text-3xl md:text-4xl text-brand-laranja mb-4">Próximos Passos</h2>
             <p className="text-lg max-w-2xl mx-auto mb-8">
-              Estamos animados com as possibilidades. Gostaríamos de agendar uma conversa para elaborar os detalhes desta proposta de empresa para empresa e explorar como podemos, juntos, construir essa ponte entre educação e arte.
+              Estamos animados com as possibilidades. Podemos agendar uma nova conversa para ajustar os detalhes desta proposta.
             </p>
             <a 
               href="mailto:marialivia@labirintar.com.br" 
@@ -68,10 +81,8 @@ const App: React.FC = () => {
         </main>
 
         <footer className="text-center mt-20 pt-8 border-t border-brand-creme">
-          <LabirintarLogo className="h-16 mx-auto" withTagline={true}/>
-          <p className="mt-4 text-sm text-gray-500">
-            Labirintar - Lugar de Fazer e Ser
-          </p>
+          <img src="https://operacaolabirintar.github.io/Reposit-rio-de-Imagens/IMG_5430.png" alt="Labirintar Logo" className="w-48 mx-auto" />
+          <p className="text-sm text-gray-600 mt-4">© 2025 LABirintar. Todos os direitos reservados.</p>
         </footer>
       </div>
     </div>
