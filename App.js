@@ -1,6 +1,6 @@
 import React from 'react';
-import { LabirintarLogo } from './components/LabirintarLogo';
-import { PacaTatuLogo } from './components/PacaTatuLogo';
+import { LabirintarLogo } from './components/LabirintarLogo.js';
+import { PacaTatuLogo } from './components/PacaTatuLogo.js';
 
 const App = () => {
   return (
